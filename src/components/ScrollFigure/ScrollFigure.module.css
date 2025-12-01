@@ -1,0 +1,27 @@
+.scrollFigureContainer {
+  position: fixed;
+  top: 50%;
+  right: -100px;
+  transform: translateY(-50%);
+  width: 600px;
+  height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  z-index: 15;
+}
+
+.scrollFigure {
+  width: 600px;
+  height: 600px;
+  opacity: 0.08;
+  will-change: transform;
+}
+
+@media (max-width: 768px) {
+  .scrollFigure {
+    width: 350px;
+    height: 350px;
+  }
+}

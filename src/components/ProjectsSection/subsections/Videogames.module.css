@@ -1,0 +1,216 @@
+.videogames {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.gameCard {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  padding: 2rem;
+  background: var(--color-black-lighter);
+  border-radius: 20px;
+  border: 2px solid transparent;
+  transition: all var(--transition-normal);
+  position: relative;
+}
+
+.gameCard:hover {
+  border-color: var(--color-red-primary);
+  transform: translateY(-5px);
+  box-shadow: 0 20px 60px rgba(230, 57, 70, 0.2);
+}
+
+.gameCard:nth-child(even) {
+  grid-template-columns: 1fr 1fr;
+}
+
+.gameCard:nth-child(even) .videoSection {
+  order: 2;
+}
+
+.gameCard:nth-child(even) .gameInfo {
+  order: 1;
+}
+
+.videoSection {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+}
+
+.videoPlaceholder {
+  width: 100%;
+  height: 100%;
+  background: var(--color-black-lighter);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  cursor: pointer;
+  transition: all var(--transition-normal);
+}
+
+.videoPlaceholder:hover {
+  background: var(--color-black-soft);
+  border: 2px solid var(--color-red-primary);
+}
+
+.playIcon {
+  font-size: 3rem;
+  color: var(--color-red-primary);
+  transition: transform var(--transition-normal);
+}
+
+.videoPlaceholder:hover .playIcon {
+  transform: scale(1.2);
+}
+
+.videoPlaceholder p {
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  letter-spacing: 0.1em;
+  color: var(--color-gray-light);
+}
+
+.video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.gameInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.gameMeta {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.genre,
+.year {
+  padding: 0.4rem 1rem;
+  background: var(--color-black);
+  border: 1px solid var(--color-red-primary);
+  border-radius: 15px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-red-primary);
+  letter-spacing: 0.05em;
+}
+
+.gameTitle {
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+  color: var(--color-white);
+  line-height: 1.2;
+}
+
+.gameDescription {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: var(--color-gray-light);
+}
+
+.itchButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 2rem;
+  background: transparent;
+  border: 2px solid var(--color-red-primary);
+  border-radius: 50px;
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  letter-spacing: 0.1em;
+  color: var(--color-red-primary);
+  text-decoration: none;
+  align-self: flex-start;
+  transition: all var(--transition-normal);
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.itchButton::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='3' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.4'/%3E%3C/svg%3E");
+  opacity: 0;
+  transition: opacity var(--transition-normal);
+  mix-blend-mode: overlay;
+  pointer-events: none;
+}
+
+.itchButton:hover::before {
+  opacity: 0.3;
+}
+
+.itchButton:hover {
+  background: var(--color-red-primary);
+  color: var(--color-white);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(230, 57, 70, 0.3);
+}
+
+.itchIcon {
+  font-size: 1.5rem;
+}
+
+.arrow {
+  font-size: 1.3rem;
+  transition: transform var(--transition-fast);
+}
+
+.itchButton:hover .arrow {
+  transform: translateX(5px);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .gameCard {
+    grid-template-columns: 1fr !important;
+    gap: 2rem;
+  }
+
+  .gameCard:nth-child(even) .videoSection,
+  .gameCard:nth-child(even) .gameInfo {
+    order: initial;
+  }
+}
+
+@media (max-width: 768px) {
+  .videogames {
+    gap: 3rem;
+  }
+
+  .gameCard {
+    padding: 1.5rem;
+  }
+
+  .gameTitle {
+    font-size: 1.8rem;
+  }
+
+  .gameDescription {
+    font-size: 1rem;
+  }
+
+  .itchButton {
+    width: 100%;
+    justify-content: center;
+  }
+}

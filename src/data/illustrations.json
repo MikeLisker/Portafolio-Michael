@@ -1,0 +1,92 @@
+[
+  {
+    "id": 1,
+    "title": "Concept Art",
+    "type": "Digital",
+    "tall": true,
+    "images": ["/images/illustration1.jpg"],
+    "description": "Arte conceptual para desarrollo de personajes y ambientes.",
+    "year": "2024",
+    "tools": ["Photoshop", "Procreate"]
+  },
+  {
+    "id": 2,
+    "title": "Character Design",
+    "type": "Digital",
+    "tall": false,
+    "images": ["/images/illustration2.jpg"],
+    "description": "Diseño de personajes con exploración de estilos y personalidades.",
+    "year": "2024",
+    "tools": ["Photoshop", "Illustrator"]
+  },
+  {
+    "id": 3,
+    "title": "Boceto Analógico",
+    "type": "Analógico",
+    "tall": false,
+    "images": ["/images/illustration3.jpg"],
+    "description": "Bocetos tradicionales a lápiz y tinta.",
+    "year": "2024",
+    "tools": ["Lápiz", "Tinta"]
+  },
+  {
+    "id": 4,
+    "title": "Ilustración Editorial",
+    "type": "Digital",
+    "tall": true,
+    "images": ["/images/illustration4.jpg"],
+    "description": "Ilustraciones para publicaciones y medios editoriales.",
+    "year": "2024",
+    "tools": ["Photoshop", "Illustrator"]
+  },
+  {
+    "id": 5,
+    "title": "Retrato Digital",
+    "type": "Digital",
+    "tall": false,
+    "images": ["/images/illustration5.jpg"],
+    "description": "Retratos digitales con técnicas de pintura digital.",
+    "year": "2023",
+    "tools": ["Photoshop", "Procreate"]
+  },
+  {
+    "id": 6,
+    "title": "Storyboard",
+    "type": "Analógico",
+    "tall": false,
+    "images": ["/images/illustration6.jpg"],
+    "description": "Storyboards para secuencias animadas y cinematográficas.",
+    "year": "2023",
+    "tools": ["Lápiz", "Papel"]
+  },
+  {
+    "id": 7,
+    "title": "Pintura Digital",
+    "type": "Digital",
+    "tall": true,
+    "images": ["/images/illustration7.jpg"],
+    "description": "Pintura digital con técnicas avanzadas de color y composición.",
+    "year": "2023",
+    "tools": ["Photoshop", "Corel Painter"]
+  },
+  {
+    "id": 8,
+    "title": "Line Art",
+    "type": "Analógico",
+    "tall": false,
+    "images": ["/images/illustration8.jpg"],
+    "description": "Arte lineal tradicional con tinta y estilógrafo.",
+    "year": "2023",
+    "tools": ["Tinta", "Estilógrafo"]
+  },
+  {
+    "id": 9,
+    "title": "Concept Environment",
+    "type": "Digital",
+    "tall": true,
+    "images": ["/images/illustration9.jpg"],
+    "description": "Conceptos de entornos y escenarios para proyectos narrativos.",
+    "year": "2023",
+    "tools": ["Photoshop", "Blender"]
+  }
+]

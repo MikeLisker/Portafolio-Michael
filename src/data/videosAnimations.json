@@ -1,0 +1,57 @@
+[
+  {
+    "id": 1,
+    "title": "Motion Graphics Reel",
+    "synopsis": "Compilado de animaciones para publicidad y redes sociales",
+    "description": "Este reel muestra una selección de trabajos de motion graphics realizados para diferentes marcas y proyectos. Incluye animaciones de texto, transiciones dinámicas y elementos gráficos animados.",
+    "thumbnail": "/images/video1-thumb.jpg",
+    "youtubeId": "",
+    "duration": "2:30",
+    "tools": ["After Effects", "Illustrator", "Premiere Pro"],
+    "year": "2024"
+  },
+  {
+    "id": 2,
+    "title": "Cortometraje Animado",
+    "synopsis": "Historia corta de animación 2D sobre la creatividad",
+    "description": "Cortometraje animado que explora el proceso creativo a través de una narrativa visual. Combina técnicas de animación tradicional con elementos digitales.",
+    "thumbnail": "/images/video2-thumb.jpg",
+    "youtubeId": "",
+    "duration": "5:00",
+    "tools": ["After Effects", "Photoshop", "Audition"],
+    "year": "2024"
+  },
+  {
+    "id": 3,
+    "title": "VFX Breakdown",
+    "synopsis": "Efectos visuales y composición para proyecto audiovisual",
+    "description": "Breakdown detallado de los efectos visuales creados para un proyecto audiovisual. Muestra el proceso desde el footage original hasta el resultado final.",
+    "thumbnail": "/images/video3-thumb.jpg",
+    "youtubeId": "",
+    "duration": "3:15",
+    "tools": ["After Effects", "Element 3D", "Premiere Pro"],
+    "year": "2024"
+  },
+  {
+    "id": 4,
+    "title": "Character Animation",
+    "synopsis": "Demostración de animación de personajes en After Effects",
+    "description": "Demostración de técnicas de animación de personajes usando rigging y expresiones en After Effects. Incluye ciclos de caminata y expresiones faciales.",
+    "thumbnail": "/images/video4-thumb.jpg",
+    "youtubeId": "",
+    "duration": "1:45",
+    "tools": ["After Effects", "Character Animator", "Illustrator"],
+    "year": "2023"
+  },
+  {
+    "id": 5,
+    "title": "Logo Animations",
+    "synopsis": "Colección de animaciones de logos corporativos",
+    "description": "Colección de animaciones de logos creadas para diferentes clientes. Cada animación está diseñada para reflejar la identidad de la marca.",
+    "thumbnail": "/images/video5-thumb.jpg",
+    "youtubeId": "",
+    "duration": "2:00",
+    "tools": ["After Effects", "Illustrator"],
+    "year": "2023"
+  }
+]

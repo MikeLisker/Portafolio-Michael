@@ -1,0 +1,205 @@
+.projectsSection {
+  position: relative;
+  min-height: 100vh;
+  padding: 8rem 2rem;
+  background: var(--color-black);
+  overflow: visible;
+  opacity: 1;
+  visibility: visible;
+  z-index: 10;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  width: 100%;
+  position: relative;
+  z-index: 2;
+}
+
+/* Formas vectoriales personalizadas */
+.shape {
+  position: absolute;
+  pointer-events: none;
+  z-index: 1;
+  transition: all var(--transition-normal);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.circle {
+  width: 380px;
+  height: 380px;
+  background-image: url('/images/figura-sol.svg');
+  opacity: 0.18;
+  animation: rotateSmooth 20s linear infinite;
+}
+
+@keyframes rotateSmooth {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.triangle {
+  width: 280px;
+  height: 280px;
+  background-image: url('/images/forma-gota.svg');
+  opacity: 0.22;
+}
+
+.title {
+  font-size: clamp(3rem, 7vw, 7rem);
+  margin-bottom: 4rem;
+  text-align: right;
+  line-height: 0.9;
+}
+
+.redText {
+  color: var(--color-red-primary);
+  text-shadow: 0 0 30px rgba(230, 57, 70, 0.6);
+}
+
+.categoryTabs {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 4rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.tab {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 1rem 2rem;
+  background: var(--color-black-lighter);
+  border: 2px solid transparent;
+  border-radius: 50px;
+  font-family: var(--font-heading);
+  font-size: 1.2rem;
+  letter-spacing: 0.05em;
+  color: var(--color-gray-light);
+  cursor: pointer;
+  transition: all var(--transition-normal);
+  position: relative;
+  overflow: hidden;
+}
+
+.tab::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(230, 57, 70, 0.3), transparent);
+  transition: left 0.5s ease;
+}
+
+.tab:hover::before {
+  left: 100%;
+}
+
+.tab:hover {
+  border-color: var(--color-red-primary);
+  color: var(--color-white);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(230, 57, 70, 0.3);
+}
+
+.tab.active {
+  background: var(--color-red-primary);
+  border-color: var(--color-red-primary);
+  color: var(--color-white);
+  box-shadow: 0 10px 40px rgba(230, 57, 70, 0.5);
+}
+
+.tabIcon {
+  font-size: 1.5rem;
+}
+
+.tabLabel {
+  white-space: nowrap;
+}
+
+.contentContainer {
+  position: relative;
+  min-height: 600px;
+}
+
+.backgroundDecor {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.redBlur {
+  position: absolute;
+  top: 50%;
+  right: -200px;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(230, 57, 70, 0.2) 0%, transparent 70%);
+  filter: blur(100px);
+  animation: floatBlur 8s ease-in-out infinite;
+}
+
+@keyframes floatBlur {
+  0%, 100% { transform: translate(0, -50%); }
+  50% { transform: translate(-100px, -60%); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .projectsSection {
+    padding: 6rem 1rem;
+  }
+
+  .title {
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+
+  .categoryTabs {
+    gap: 0.5rem;
+  }
+
+  .tab {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+  }
+
+  .tabIcon {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .projectsSection {
+    padding: 4rem 0.75rem;
+  }
+  
+  .title {
+    font-size: 2rem;
+  }
+  
+  .tab {
+    flex: 1 1 calc(50% - 0.5rem);
+    justify-content: center;
+    padding: 0.8rem 1rem;
+  }
+
+  .tabLabel {
+    font-size: 0.85rem;
+  }
+}

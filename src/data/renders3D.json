@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "title": "Modelado de Personaje",
+    "software": "Maya",
+    "images": ["/images/render1.jpg"],
+    "description": "Modelado completo de personaje con topología optimizada para animación.",
+    "year": "2024",
+    "details": "Personaje modelado con flujo de trabajo profesional, topología limpia y UV mapping optimizado."
+  },
+  {
+    "id": 2,
+    "title": "Escenario Futurista",
+    "software": "Blender",
+    "images": ["/images/render2.jpg"],
+    "description": "Entorno sci-fi con materiales PBR y sistema de iluminación volumétrica.",
+    "year": "2024",
+    "details": "Escenario completo con materiales procedurales, iluminación HDRI y efectos volumétricos."
+  },
+  {
+    "id": 3,
+    "title": "Producto Comercial",
+    "software": "3ds Max",
+    "images": ["/images/render3.jpg"],
+    "description": "Renderizado fotorrealista para presentación de producto.",
+    "year": "2024",
+    "details": "Render comercial con setup de iluminación de estudio y materiales realistas."
+  },
+  {
+    "id": 4,
+    "title": "Arquitectura Interior",
+    "software": "Maya",
+    "images": ["/images/render4.jpg"],
+    "description": "Visualización arquitectónica de espacio interior moderno.",
+    "year": "2023",
+    "details": "Visualización arquitectónica con materiales realistas y iluminación natural."
+  },
+  {
+    "id": 5,
+    "title": "Vehículo Concept",
+    "software": "Blender",
+    "images": ["/images/render5.jpg"],
+    "description": "Diseño de vehículo conceptual con detalles hard-surface.",
+    "year": "2023",
+    "details": "Modelado hard-surface con subdivisión y materiales metálicos avanzados."
+  },
+  {
+    "id": 6,
+    "title": "Criatura Fantástica",
+    "software": "ZBrush",
+    "images": ["/images/render6.jpg"],
+    "description": "Escultura digital de criatura con texturizado detallado.",
+    "year": "2023",
+    "details": "Escultura digital con millones de polígonos, retopología y texturizado en Substance."
+  },
+  {
+    "id": 7,
+    "title": "Entorno Natural",
+    "software": "Blender",
+    "images": ["/images/render7.jpg"],
+    "description": "Paisaje natural con vegetación procedural y terreno realista.",
+    "year": "2023",
+    "details": "Entorno natural con sistemas de partículas para vegetación y terreno esculpido."
+  },
+  {
+    "id": 8,
+    "title": "Props & Assets",
+    "software": "Maya",
+    "images": ["/images/render8.jpg"],
+    "description": "Colección de assets 3D optimizados para videojuegos.",
+    "year": "2023",
+    "details": "Props de juego con LODs múltiples, UV mapping eficiente y materiales optimizados."
+  }
+]

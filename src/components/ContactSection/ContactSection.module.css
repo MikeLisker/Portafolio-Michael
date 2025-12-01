@@ -1,0 +1,348 @@
+.contactSection {
+  position: relative;
+  min-height: 100vh;
+  padding: 8rem 2rem;
+  background: var(--color-black-soft);
+  overflow: hidden;
+  opacity: 1;
+  visibility: visible;
+  z-index: 10;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  width: 100%;
+  position: relative;
+  z-index: 2;
+}
+
+.title {
+  font-size: clamp(3rem, 7vw, 7rem);
+  margin-bottom: 5rem;
+  text-align: center;
+  line-height: 1.1;
+}
+
+.redText {
+  color: var(--color-red-primary);
+  text-shadow: 0 0 30px rgba(230, 57, 70, 0.6);
+}
+
+.contentGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: start;
+}
+
+/* About Content */
+.aboutContent {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.infoBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.subtitle {
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+  color: var(--color-red-primary);
+  margin-bottom: 0.5rem;
+}
+
+.text {
+  font-size: 1.1rem;
+  line-height: 1.9;
+  color: var(--color-gray-light);
+}
+
+.interestList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.interestList li {
+  font-size: 1.1rem;
+  color: var(--color-gray-light);
+  padding-left: 0.5rem;
+  transition: all var(--transition-fast);
+  cursor: default;
+}
+
+.interestList li:hover {
+  color: var(--color-white);
+  transform: translateX(10px);
+}
+
+.socialLinks {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.socialLink {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 1rem 1.5rem;
+  background: var(--color-black-lighter);
+  border: 2px solid transparent;
+  border-radius: 15px;
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  color: var(--color-white);
+  text-decoration: none;
+  transition: all var(--transition-normal);
+}
+
+.socialLink:hover {
+  border-color: var(--color-red-primary);
+  background: var(--color-black);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(230, 57, 70, 0.3);
+}
+
+.socialIcon {
+  font-size: 1.5rem;
+}
+
+/* Form */
+.formContainer {
+  background: var(--color-black-lighter);
+  padding: 3rem;
+  border-radius: 25px;
+  border: 2px solid var(--color-red-primary);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+}
+
+.formTitle {
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+  color: var(--color-white);
+  margin-bottom: 0.5rem;
+}
+
+.formSubtitle {
+  font-size: 1.1rem;
+  color: var(--color-gray-light);
+  margin-bottom: 2rem;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.label {
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  letter-spacing: 0.05em;
+  color: var(--color-white);
+}
+
+.input,
+.textarea {
+  padding: 1rem 1.5rem;
+  background: var(--color-black);
+  border: 2px solid var(--color-black-soft);
+  border-radius: 12px;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  color: var(--color-white);
+  transition: all var(--transition-fast);
+}
+
+.input:focus,
+.textarea:focus {
+  outline: none;
+  border-color: var(--color-red-primary);
+  box-shadow: 0 0 20px rgba(230, 57, 70, 0.3);
+}
+
+.input.error,
+.textarea.error {
+  border-color: #ff4757;
+}
+
+.textarea {
+  resize: vertical;
+  min-height: 150px;
+}
+
+.errorMessage {
+  font-size: 0.85rem;
+  color: #ff4757;
+  margin-top: -0.5rem;
+}
+
+.submitButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1.3rem 2.5rem;
+  background: var(--color-red-primary);
+  border: 2px solid var(--color-red-primary);
+  border-radius: 50px;
+  font-family: var(--font-heading);
+  font-size: 1.3rem;
+  letter-spacing: 0.1em;
+  color: var(--color-white);
+  cursor: pointer;
+  transition: all var(--transition-normal);
+  margin-top: 1rem;
+}
+
+.submitButton:hover {
+  background: var(--color-red-dark);
+  border-color: var(--color-red-dark);
+  transform: translateY(-3px);
+  box-shadow: 0 15px 40px rgba(230, 57, 70, 0.5);
+}
+
+.arrow {
+  font-size: 1.5rem;
+  transition: transform var(--transition-fast);
+}
+
+.submitButton:hover .arrow {
+  transform: translateX(5px);
+}
+
+.successMessage {
+  margin-top: 1.5rem;
+  padding: 1.2rem;
+  border-radius: 12px;
+  text-align: center;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.successMessage.success {
+  background: rgba(40, 167, 69, 0.2);
+  border: 2px solid #28a745;
+  color: #28a745;
+}
+
+.successMessage.errorMsg {
+  background: rgba(255, 71, 87, 0.2);
+  border: 2px solid #ff4757;
+  color: #ff4757;
+}
+
+/* Background Effects */
+.backgroundEffect {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.redGradient {
+  position: absolute;
+  top: -200px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 800px;
+  height: 800px;
+  background: radial-gradient(circle, rgba(230, 57, 70, 0.2) 0%, transparent 70%);
+  filter: blur(100px);
+  animation: gradientPulse 8s ease-in-out infinite;
+}
+
+@keyframes gradientPulse {
+  0%, 100% {
+    transform: translateX(-50%) scale(1);
+    opacity: 0.5;
+  }
+  50% {
+    transform: translateX(-50%) scale(1.2);
+    opacity: 0.8;
+  }
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .contentGrid {
+    grid-template-columns: 1fr;
+    gap: 4rem;
+  }
+
+  .socialLinks {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .contactSection {
+    padding: 5rem 1rem;
+  }
+
+  .title {
+    font-size: 3rem;
+    margin-bottom: 3rem;
+  }
+
+  .formContainer {
+    padding: 2rem;
+  }
+
+  .formTitle {
+    font-size: 1.8rem;
+  }
+
+  .formSubtitle {
+    font-size: 1rem;
+  }
+
+  .socialLinks {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .contactSection {
+    padding: 4rem 0.75rem;
+  }
+  
+  .title {
+    font-size: 2rem;
+  }
+  
+  .formContainer {
+    padding: 1.5rem;
+  }
+  
+  .formTitle {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .formContainer {
+    padding: 1.5rem;
+  }
+
+  .submitButton {
+    padding: 1.2rem 2rem;
+    font-size: 1.1rem;
+  }
+}
