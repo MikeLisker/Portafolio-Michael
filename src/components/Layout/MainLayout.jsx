@@ -5,6 +5,7 @@ import Navigation from '../Navigation/Navigation'
 import ScrollFigure from '../ScrollFigure/ScrollFigure'
 import ScrollFigureLuna from '../ScrollFigureLuna/ScrollFigureLuna'
 import ScrollToTop from '../ScrollToTop/ScrollToTop'
+import ThemeToggle from '../ThemeToggle/ThemeToggle'
 import styles from './MainLayout.module.css'
 
 gsap.registerPlugin(ScrollTrigger)
@@ -35,6 +36,7 @@ const MainLayout = ({ children }) => {
   return (
     <div className={styles.mainLayout}>
       <Navigation />
+      <ThemeToggle />
       <ScrollFigure />
       <ScrollFigureLuna />
       <ScrollToTop />

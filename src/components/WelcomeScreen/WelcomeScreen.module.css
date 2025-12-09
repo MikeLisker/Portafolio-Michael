@@ -4,13 +4,14 @@
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-color: var(--color-black);
+  background-color: var(--bg-primary);
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
   overflow: hidden;
   z-index: 200;
+  transition: background-color var(--transition-normal);
 }
 
 .welcomeScreen::before {
@@ -142,7 +143,7 @@
   font-family: var(--font-heading);
   font-size: clamp(1.2rem, 2vw, 1.8rem);
   letter-spacing: 0.2em;
-  color: var(--color-white);
+  color: var(--text-primary);
   text-shadow: 0 0 10px rgba(230, 57, 70, 0.5);
 }
 
@@ -157,8 +158,62 @@
   50% { transform: translateY(15px); }
 }
 
+/* Botón de tema en WelcomeScreen */
+.themeToggle {
+  position: fixed;
+  top: 2rem;
+  right: 2rem;
+  width: 80px;
+  height: 80px;
+  background: transparent;
+  border: 3px solid var(--color-red-primary);
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition-normal);
+  padding: 0;
+  box-shadow: 0 0 30px rgba(230, 57, 70, 0.4);
+}
+
+.themeToggle:hover {
+  transform: scale(1.1) rotate(15deg);
+  box-shadow: 0 0 40px rgba(230, 57, 70, 0.7);
+  border-color: var(--color-red-bright);
+}
+
+.themeToggle:active {
+  transform: scale(0.95);
+}
+
+.themeIcon {
+  width: 50px;
+  height: 50px;
+  filter: brightness(0) invert(1);
+  transition: all var(--transition-normal);
+}
+
+.themeToggle:hover .themeIcon {
+  filter: brightness(0) invert(1) drop-shadow(0 0 10px rgba(255, 255, 255, 0.8));
+  transform: rotate(-15deg);
+}
+
 /* Responsive */
 @media (max-width: 1024px) {
+  .themeToggle {
+    width: 70px;
+    height: 70px;
+    top: 1.5rem;
+    right: 1.5rem;
+  }
+
+  .themeIcon {
+    width: 45px;
+    height: 45px;
+  }
+
   .logo {
     width: 60vw;
     height: 60vw;
@@ -172,6 +227,19 @@
 }
 
 @media (max-width: 768px) {
+  .themeToggle {
+    width: 60px;
+    height: 60px;
+    top: 1rem;
+    right: 1rem;
+    border-width: 2px;
+  }
+
+  .themeIcon {
+    width: 38px;
+    height: 38px;
+  }
+
   .logo {
     width: 70vw;
     height: 70vw;
@@ -195,6 +263,18 @@
 }
 
 @media (max-width: 480px) {
+  .themeToggle {
+    width: 50px;
+    height: 50px;
+    top: 1rem;
+    right: 1rem;
+  }
+
+  .themeIcon {
+    width: 32px;
+    height: 32px;
+  }
+
   .logo {
     width: 80vw;
     height: 80vw;

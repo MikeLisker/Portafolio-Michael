@@ -2,11 +2,12 @@
   position: relative;
   min-height: 100vh;
   padding: 8rem 2rem;
-  background: var(--color-black);
+  background: var(--bg-primary);
   overflow: visible;
   opacity: 1;
   visibility: visible;
   z-index: 10;
+  transition: background var(--transition-normal);
 }
 
 .container {
@@ -76,13 +77,13 @@
   align-items: center;
   gap: 0.8rem;
   padding: 1rem 2rem;
-  background: var(--color-black-lighter);
+  background: var(--bg-tertiary);
   border: 2px solid transparent;
   border-radius: 50px;
   font-family: var(--font-heading);
   font-size: 1.2rem;
   letter-spacing: 0.05em;
-  color: var(--color-gray-light);
+  color: var(--text-secondary);
   cursor: pointer;
   transition: all var(--transition-normal);
   position: relative;

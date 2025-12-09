@@ -1,39 +1,54 @@
 [
   {
     "id": 1,
-    "title": "Modelado de Personaje",
-    "software": "Maya",
-    "images": ["/images/render1.jpg"],
-    "description": "Modelado completo de personaje con topología optimizada para animación.",
+    "title": "Carro Deportivo",
+    "software": "Blender",
+    "images": ["/images/proyectos/Renders%20y%20modelados/render%20-%20Carro%201.jpg"],
+    "description": "Render fotorrealista de vehículo deportivo con materiales metálicos y reflejos realistas.",
     "year": "2024",
-    "details": "Personaje modelado con flujo de trabajo profesional, topología limpia y UV mapping optimizado."
+    "details": "Modelado hard-surface con iluminación de estudio y materiales PBR avanzados."
   },
   {
     "id": 2,
-    "title": "Escenario Futurista",
+    "title": "Carro y Personaje",
     "software": "Blender",
-    "images": ["/images/render2.jpg"],
-    "description": "Entorno sci-fi con materiales PBR y sistema de iluminación volumétrica.",
+    "images": [
+      "/images/proyectos/Renders%20y%20modelados/Modelado%20-%20Carro%20y%20personaje/modelado%20-%20carro%20001.png",
+      "/images/proyectos/Renders%20y%20modelados/Modelado%20-%20Carro%20y%20personaje/modelado%20-%20carro%20002.png",
+      "/images/proyectos/Renders%20y%20modelados/Modelado%20-%20Carro%20y%20personaje/Screenshot%20monstruo.png"
+    ],
+    "description": "Serie de modelados 3D incluyendo vehículo y personaje estilizado.",
     "year": "2024",
-    "details": "Escenario completo con materiales procedurales, iluminación HDRI y efectos volumétricos."
+    "details": "Modelado completo con diferentes vistas y renders de proceso, topología optimizada."
   },
   {
     "id": 3,
-    "title": "Producto Comercial",
-    "software": "3ds Max",
-    "images": ["/images/render3.jpg"],
-    "description": "Renderizado fotorrealista para presentación de producto.",
+    "title": "Comic: El Último Duelo",
+    "software": "Blender",
+    "images": [
+      "/images/proyectos/Renders%20y%20modelados/Render%20-%20Comic%20El%20ultimo%20duelo/ultimoduelo-portada.png",
+      "/images/proyectos/Renders%20y%20modelados/Render%20-%20Comic%20El%20ultimo%20duelo/ulitmoduelo-001.png",
+      "/images/proyectos/Renders%20y%20modelados/Render%20-%20Comic%20El%20ultimo%20duelo/ultimoduleo-002.png",
+      "/images/proyectos/Renders%20y%20modelados/Render%20-%20Comic%20El%20ultimo%20duelo/ulitmoduelo-003.jpg",
+      "/images/proyectos/Renders%20y%20modelados/Render%20-%20Comic%20El%20ultimo%20duelo/ulitmoduelo-004.jpg",
+      "/images/proyectos/Renders%20y%20modelados/Render%20-%20Comic%20El%20ultimo%20duelo/ultimoduelo-005.jpg"
+    ],
+    "description": "Serie de renders para proyecto de cómic digital con personajes y escenarios 3D.",
     "year": "2024",
-    "details": "Render comercial con setup de iluminación de estudio y materiales realistas."
+    "details": "Proyecto completo de cómic con renders estilizados, iluminación dramática y composición cinemática."
   },
   {
     "id": 4,
-    "title": "Arquitectura Interior",
-    "software": "Maya",
-    "images": ["/images/render4.jpg"],
-    "description": "Visualización arquitectónica de espacio interior moderno.",
-    "year": "2023",
-    "details": "Visualización arquitectónica con materiales realistas y iluminación natural."
+    "title": "Criatura Monstruosa",
+    "software": "ZBrush + Blender",
+    "images": [
+      "/images/proyectos/Renders%20y%20modelados/Render%20-%20Monstruo/render-monstruo-1.png",
+      "/images/proyectos/Renders%20y%20modelados/Render%20-%20Monstruo/render-monstruo-2.png",
+      "/images/proyectos/Renders%20y%20modelados/Render%20-%20Monstruo/render-monstruo-3.png"
+    ],
+    "description": "Escultura digital de criatura fantástica con texturizado detallado y múltiples vistas.",
+    "year": "2024",
+    "details": "Escultura digital con alto nivel de detalle, retopología y renders desde diferentes ángulos."
   },
   {
     "id": 5,
@@ -46,12 +61,12 @@
   },
   {
     "id": 6,
-    "title": "Criatura Fantástica",
-    "software": "ZBrush",
+    "title": "Arquitectura Interior",
+    "software": "Maya",
     "images": ["/images/render6.jpg"],
-    "description": "Escultura digital de criatura con texturizado detallado.",
+    "description": "Visualización arquitectónica de espacio interior moderno.",
     "year": "2023",
-    "details": "Escultura digital con millones de polígonos, retopología y texturizado en Substance."
+    "details": "Visualización arquitectónica con materiales realistas y iluminación natural."
   },
   {
     "id": 7,

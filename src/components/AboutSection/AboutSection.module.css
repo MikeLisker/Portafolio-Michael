@@ -5,10 +5,11 @@
   align-items: center;
   padding: 8rem 2rem;
   overflow: hidden;
-  background: var(--color-black);
+  background: var(--bg-primary);
   opacity: 1;
   visibility: visible;
   z-index: 10;
+  transition: background var(--transition-normal);
 }
 
 .container {
@@ -98,14 +99,14 @@
 
 .mainText {
   font-size: clamp(1.2rem, 2vw, 1.4rem);
-  color: var(--color-white);
+  color: var(--text-primary);
   line-height: 1.8;
 }
 
 .description p {
   font-size: clamp(1rem, 1.5vw, 1.1rem);
   line-height: 1.9;
-  color: var(--color-gray-light);
+  color: var(--text-secondary);
 }
 
 .highlight {

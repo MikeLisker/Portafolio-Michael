@@ -1,20 +1,20 @@
 [
   {
     "id": 1,
-    "title": "Nombre del Juego 1",
-    "description": "Aventura épica de acción y estrategia con mecánicas innovadoras. Explora mundos generados proceduralmente mientras resuelves puzzles complejos.",
-    "trailer": "/videos/game1-trailer.mp4",
-    "itchUrl": "https://tu-usuario.itch.io/juego-1",
-    "genre": "Acción/Aventura",
+    "title": "Los 4 Elementos de la Multimedia",
+    "description": "Juego interactivo educativo que explora los cuatro elementos fundamentales de la multimedia: texto, imagen, audio y video. Una experiencia de aprendizaje gamificada.",
+    "trailer": "https://youtu.be/lrwtwHMHQ5s",
+    "itchUrl": "https://tu-usuario.itch.io/4-elementos-multimedia",
+    "genre": "Educativo/Puzzle",
     "year": "2024"
   },
   {
     "id": 2,
-    "title": "Nombre del Juego 2",
-    "description": "Juego de plataformas narrativo con arte pixel art único. Una historia conmovedora sobre la superación personal y el trabajo en equipo.",
-    "trailer": "/videos/game2-trailer.mp4",
-    "itchUrl": "https://tu-usuario.itch.io/juego-2",
-    "genre": "Plataformas",
-    "year": "2023"
+    "title": "Run Ñero Run",
+    "description": "Juego de plataformas endless runner con temática urbana colombiana. Corre, salta y esquiva obstáculos en un colorido entorno lleno de cultura local.",
+    "trailer": "",
+    "itchUrl": "https://tu-usuario.itch.io/run-nero-run",
+    "genre": "Plataformas/Endless Runner",
+    "year": "2024"
   }
 ]

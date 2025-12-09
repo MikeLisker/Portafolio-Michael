@@ -70,9 +70,24 @@ const VideosAnimations = () => {
           {videosData.map((video) => (
             <div key={video.id} className={styles.videoCard} onClick={() => openModal(video)}>
               <div className={styles.thumbnail}>
-                <div className={styles.thumbnailPlaceholder}>
-                  <div className={styles.playButton}>▶</div>
-                </div>
+                {video.videoFile ? (
+                  <video 
+                    className={styles.thumbnailVideo}
+                    src={video.videoFile}
+                    muted
+                    loop
+                    playsInline
+                    onMouseEnter={(e) => e.target.play()}
+                    onMouseLeave={(e) => {
+                      e.target.pause()
+                      e.target.currentTime = 0
+                    }}
+                  />
+                ) : (
+                  <div className={styles.thumbnailPlaceholder}>
+                    <div className={styles.playButton}>▶</div>
+                  </div>
+                )}
                 <div className={styles.duration}>{video.duration}</div>
               </div>
 
@@ -126,10 +141,19 @@ const VideosAnimations = () => {
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowFullScreen
                   />
+                ) : selectedVideo.videoFile ? (
+                  <video 
+                    key={selectedVideo.id}
+                    controls 
+                    className={styles.localVideo}
+                  >
+                    <source src={selectedVideo.videoFile} type="video/mp4" />
+                    Tu navegador no soporta el elemento de video.
+                  </video>
                 ) : (
                   <div className={styles.noVideoMessage}>
                     <p>Video no disponible</p>
-                    <p className={styles.noVideoSubtext}>El link de YouTube será agregado próximamente</p>
+                    <p className={styles.noVideoSubtext}>El video será agregado próximamente</p>
                   </div>
                 )}
               </div>

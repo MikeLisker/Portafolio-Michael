@@ -9,7 +9,7 @@
 }
 
 :root {
-  /* Paleta de Colores - Negro + Rojo */
+  /* Paleta de Colores - Negro + Rojo (Modo Oscuro por defecto) */
   --color-black: #0a0a0a;
   --color-black-soft: #1a1a1a;
   --color-black-lighter: #2a2a2a;
@@ -39,6 +39,46 @@
   /* Sombras */
   --shadow-red: 0 0 30px rgba(230, 57, 70, 0.3);
   --shadow-strong: 0 10px 50px rgba(0, 0, 0, 0.8);
+
+  /* Variables de tema - Modo Oscuro */
+  --bg-primary: var(--color-black);
+  --bg-secondary: var(--color-black-soft);
+  --bg-tertiary: var(--color-black-lighter);
+  --text-primary: var(--color-white);
+  --text-secondary: var(--color-gray-light);
+  --text-muted: var(--color-gray);
+  --accent-primary: var(--color-red-primary);
+  --accent-hover: var(--color-red-bright);
+  --border-color: rgba(230, 57, 70, 0.3);
+  --shadow-color: rgba(0, 0, 0, 0.8);
+  
+  /* Toggle específico */
+  --toggle-track-bg: #1a1a1a;
+  --toggle-border: #e63946;
+  --toggle-thumb-bg: #e63946;
+  --toggle-shadow: rgba(0, 0, 0, 0.4);
+}
+
+/* Modo Claro */
+[data-theme="light"] {
+  --bg-primary: #f5f5f5;
+  --bg-secondary: #ffffff;
+  --bg-tertiary: #e8e8e8;
+  --text-primary: #1a1a1a;
+  --text-secondary: #4a4a4a;
+  --text-muted: #6a6a6a;
+  --accent-primary: #e63946;
+  --accent-hover: #c1121f;
+  --border-color: rgba(230, 57, 70, 0.2);
+  --shadow-color: rgba(0, 0, 0, 0.15);
+  --shadow-red: 0 0 30px rgba(230, 57, 70, 0.2);
+  --shadow-strong: 0 10px 50px rgba(0, 0, 0, 0.1);
+  
+  /* Toggle específico para modo claro */
+  --toggle-track-bg: #e0e0e0;
+  --toggle-border: #e63946;
+  --toggle-thumb-bg: #ffc107;
+  --toggle-shadow: rgba(0, 0, 0, 0.1);
 }
 
 /* ===================================
@@ -52,8 +92,8 @@ html {
 
 body {
   font-family: var(--font-body);
-  background-color: var(--color-black);
-  color: var(--color-white);
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
   line-height: 1.6;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
@@ -61,6 +101,7 @@ body {
   --cursor-x: 0px;
   --cursor-y: 0px;
   --cursor-opacity: 0;
+  transition: background-color var(--transition-normal), color var(--transition-normal);
 }
 
 /* Efecto de brillo difuso solo en hover de botones */

@@ -6,14 +6,25 @@ const WelcomeScreen = ({ onEnter }) => {
   const containerRef = useRef(null)
   const logoRef = useRef(null)
   const textRef = useRef(null)
+  const themeToggleRef = useRef(null)
   const [isAnimating, setIsAnimating] = useState(false)
+  const [isDark, setIsDark] = useState(true)
 
   useEffect(() => {
     console.log('WelcomeScreen montado, iniciando animaciones...')
     
+    // Cargar tema guardado
+    const savedTheme = localStorage.getItem('theme')
+    if (savedTheme) {
+      const isDarkTheme = savedTheme === 'dark'
+      setIsDark(isDarkTheme)
+      document.documentElement.setAttribute('data-theme', savedTheme)
+    }
+    
     // Asegurar que los elementos sean visibles primero
     gsap.set(logoRef.current, { opacity: 1, scale: 1 })
     gsap.set(textRef.current, { opacity: 1 })
+    gsap.set(themeToggleRef.current, { opacity: 1 })
 
     // Animación de entrada del logo
     const tl = gsap.timeline()
@@ -29,6 +40,12 @@ const WelcomeScreen = ({ onEnter }) => {
       opacity: 0,
       duration: 1,
       ease: 'power3.out'
+    }, '-=0.5')
+    .from(themeToggleRef.current, {
+      scale: 0,
+      opacity: 0,
+      duration: 0.8,
+      ease: 'back.out(1.7)'
     }, '-=0.5')
     .to(textRef.current, {
       opacity: 0.7,
@@ -86,6 +103,14 @@ const WelcomeScreen = ({ onEnter }) => {
     handleInteraction()
   }
 
+  const toggleTheme = (e) => {
+    e.stopPropagation() // Evitar que active handleInteraction
+    const newTheme = isDark ? 'light' : 'dark'
+    setIsDark(!isDark)
+    document.documentElement.setAttribute('data-theme', newTheme)
+    localStorage.setItem('theme', newTheme)
+  }
+
   return (
     <div 
       ref={containerRef}
@@ -94,6 +119,19 @@ const WelcomeScreen = ({ onEnter }) => {
       onTouchStart={handleInteraction}
       onWheel={handleWheel}
     >
+      <button 
+        ref={themeToggleRef}
+        onClick={toggleTheme}
+        className={styles.themeToggle}
+        aria-label="Cambiar tema"
+      >
+        {isDark ? (
+          <img src="/images/figura-luna.svg" alt="Modo Nocturno" className={styles.themeIcon} />
+        ) : (
+          <img src="/images/figura-sol.svg" alt="Modo Claro" className={styles.themeIcon} />
+        )}
+      </button>
+
       <div className={styles.content}>
         <div ref={logoRef} className={styles.logo}>
           <img src="/images/logo.svg" alt="Michael Logo" className={styles.logoSvg} />

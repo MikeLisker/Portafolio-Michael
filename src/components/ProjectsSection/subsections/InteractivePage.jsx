@@ -3,6 +3,14 @@ import { gsap } from 'gsap'
 import styles from './InteractivePage.module.css'
 import projectData from '../../../data/interactivePage.json'
 
+// Función para extraer ID de YouTube
+const getYouTubeEmbedUrl = (url) => {
+  if (!url) return null
+  const regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|\&v=)([^#\&\?]*).*/
+  const match = url.match(regExp)
+  return match && match[2].length === 11 ? `https://www.youtube.com/embed/${match[2]}` : null
+}
+
 const InteractivePage = () => {
   const containerRef = useRef(null)
   const videoRef = useRef(null)
@@ -46,17 +54,28 @@ const InteractivePage = () => {
   return (
     <div ref={containerRef} className={styles.interactivePage}>
       <div className={styles.videoContainer} ref={videoRef}>
-        {/* Reemplaza con tu video/reel real */}
-        <div className={styles.videoPlaceholder}>
-          <div className={styles.playIcon}>▶</div>
-          <p>VIDEO REEL DEL PROYECTO</p>
-        </div>
-        
-        {/* Descomentar cuando tengas el video:
-        <video controls className={styles.video}>
-          <source src={projectData.videoReel} type="video/mp4" />
-        </video>
-        */}
+        {projectData.videoReel ? (
+          getYouTubeEmbedUrl(projectData.videoReel) ? (
+            <iframe
+              src={getYouTubeEmbedUrl(projectData.videoReel)}
+              title={projectData.title}
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              className={styles.video}
+            ></iframe>
+          ) : (
+            <video controls className={styles.video}>
+              <source src={projectData.videoReel} type="video/mp4" />
+              Tu navegador no soporta videos HTML5.
+            </video>
+          )
+        ) : (
+          <div className={styles.videoPlaceholder}>
+            <div className={styles.playIcon}>▶</div>
+            <p>VIDEO REEL DEL PROYECTO</p>
+          </div>
+        )}
       </div>
 
       <div ref={contentRef} className={styles.content}>

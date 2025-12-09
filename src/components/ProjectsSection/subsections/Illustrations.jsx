@@ -99,9 +99,17 @@ const Illustrations = () => {
             onClick={() => openModal(illustration)}
           >
             <div className={styles.illustrationImage}>
-              <div className={styles.imagePlaceholder}>
-                <div className={styles.illustrationIcon}></div>
-              </div>
+              {illustration.images && illustration.images[0] ? (
+                <img 
+                  src={illustration.images[0]} 
+                  alt={illustration.title}
+                  className={styles.illustrationImg}
+                />
+              ) : (
+                <div className={styles.imagePlaceholder}>
+                  <div className={styles.illustrationIcon}></div>
+                </div>
+              )}
             </div>
 
             <div className={styles.illustrationOverlay}>

@@ -48,6 +48,8 @@ const Renders3D = () => {
   }, [selectedRender])
 
   const openModal = (render) => {
+    console.log('Opening render:', render)
+    console.log('First image:', render.images[0])
     setSelectedRender(render)
   }
 
@@ -95,9 +97,17 @@ const Renders3D = () => {
         {rendersData.map((render) => (
           <div key={render.id} className={styles.renderCard} onClick={() => openModal(render)}>
             <div className={styles.renderImage}>
-              <div className={styles.imagePlaceholder}>
-                <div className={styles.renderIcon}></div>
-              </div>
+              {render.images && render.images[0] ? (
+                <img 
+                  src={render.images[0]} 
+                  alt={render.title}
+                  className={styles.renderImg}
+                />
+              ) : (
+                <div className={styles.imagePlaceholder}>
+                  <div className={styles.renderIcon}></div>
+                </div>
+              )}
             </div>
 
             <div className={styles.renderOverlay}>

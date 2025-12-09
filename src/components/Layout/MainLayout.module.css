@@ -2,8 +2,9 @@
   width: 100%;
   min-height: 100vh;
   position: relative;
-  background: var(--color-black);
+  background: var(--bg-primary);
   z-index: 10;
+  transition: background var(--transition-normal);
 }
 
 
@@ -18,11 +19,11 @@
   width: 100%;
   padding: 2rem;
   text-align: center;
-  background: var(--color-black-soft);
+  background: var(--bg-secondary);
   border-top: 2px solid var(--color-red-primary);
 }
 
 .footer p {
   font-size: 0.9rem;
-  color: var(--color-gray);
+  color: var(--text-muted);
 }

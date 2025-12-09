@@ -1,29 +1,29 @@
 {
-  "title": "Proyecto Web Interactivo",
-  "description": "Experiencia web inmersiva desarrollada con tecnologías de vanguardia. Combina animaciones complejas, interacciones dinámicas y diseño responsivo para crear una navegación memorable y atractiva.",
-  "videoReel": "/videos/proyecto-interactivo.mp4",
-  "liveUrl": "https://tu-proyecto.com",
-  "githubUrl": "https://github.com/tu-usuario/tu-proyecto",
-  "techStack": ["React", "GSAP", "Three.js", "WebGL"],
+  "title": "Navegando el Corazón",
+  "description": "Página web interactiva que explora emociones y sentimientos a través de una experiencia de navegación inmersiva. Combina storytelling visual con interacciones dinámicas para crear un viaje emocional único.",
+  "videoReel": "https://youtu.be/gGBSsumSdHo",
+  "liveUrl": "https://navegandoelcorazon.netlify.app",
+  "githubUrl": "",
+  "techStack": ["HTML5", "CSS3", "JavaScript", "GSAP"],
   "features": [
+    "Experiencia narrativa interactiva",
     "Animaciones fluidas y transiciones suaves",
-    "Interactividad avanzada con mouse/touch",
-    "Diseño responsive y adaptable",
-    "Optimización de rendimiento",
-    "Integración de WebGL para efectos 3D"
+    "Diseño emocional y envolvente",
+    "Interactividad basada en scrolling",
+    "Diseño responsive y adaptable"
   ],
   "highlights": [
     {
-      "title": "Animaciones GSAP",
-      "description": "Sistema de animaciones complejas sincronizadas con scroll"
+      "title": "Storytelling Visual",
+      "description": "Narrativa interactiva que guía al usuario a través de diferentes emociones"
     },
     {
-      "title": "Three.js Integration",
-      "description": "Elementos 3D interactivos integrados en el diseño"
+      "title": "Diseño Emocional",
+      "description": "Paleta de colores y animaciones que evocan sentimientos específicos"
     },
     {
-      "title": "Performance",
-      "description": "Optimizado para cargar rápido y funcionar suavemente"
+      "title": "Experiencia Inmersiva",
+      "description": "Interacciones que conectan con el usuario a nivel emocional"
     }
   ]
 }

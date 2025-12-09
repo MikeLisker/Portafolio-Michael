@@ -3,6 +3,14 @@ import { gsap } from 'gsap'
 import styles from './Videogames.module.css'
 import gamesData from '../../../data/videogames.json'
 
+// Función para extraer ID de YouTube
+const getYouTubeEmbedUrl = (url) => {
+  if (!url) return null
+  const regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|\&v=)([^#\&\?]*).*/
+  const match = url.match(regExp)
+  return match && match[2].length === 11 ? `https://www.youtube.com/embed/${match[2]}` : null
+}
+
 const Videogames = () => {
   const containerRef = useRef(null)
 
@@ -24,16 +32,28 @@ const Videogames = () => {
       {gamesData.map((game) => (
         <div key={game.id} className={styles.gameCard}>
           <div className={styles.videoSection}>
-            <div className={styles.videoPlaceholder}>
-              <div className={styles.playIcon}>▶</div>
-              <p>TRAILER DEL JUEGO</p>
-            </div>
-            
-            {/* Descomentar cuando tengas videos:
-            <video controls className={styles.video}>
-              <source src={game.trailer} type="video/mp4" />
-            </video>
-            */}
+            {game.trailer ? (
+              getYouTubeEmbedUrl(game.trailer) ? (
+                <iframe
+                  src={getYouTubeEmbedUrl(game.trailer)}
+                  title={game.title}
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  className={styles.video}
+                ></iframe>
+              ) : (
+                <video controls className={styles.video}>
+                  <source src={game.trailer} type="video/mp4" />
+                  Tu navegador no soporta videos HTML5.
+                </video>
+              )
+            ) : (
+              <div className={styles.videoPlaceholder}>
+                <div className={styles.playIcon}>▶</div>
+                <p>TRAILER DEL JUEGO</p>
+              </div>
+            )}
           </div>
 
           <div className={styles.gameInfo}>
