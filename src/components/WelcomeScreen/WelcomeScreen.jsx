@@ -126,9 +126,9 @@ const WelcomeScreen = ({ onEnter }) => {
         aria-label="Cambiar tema"
       >
         {isDark ? (
-          <img src="/images/figura-luna.svg" alt="Modo Nocturno" className={styles.themeIcon} />
+          <img src="/images/figura-luna-mejorado.svg" alt="Modo Nocturno" className={styles.themeIcon} />
         ) : (
-          <img src="/images/figura-sol.svg" alt="Modo Claro" className={styles.themeIcon} />
+          <img src="/images/figura-sol2-mejorado.svg" alt="Modo Claro" className={styles.themeIcon} />
         )}
       </button>
 

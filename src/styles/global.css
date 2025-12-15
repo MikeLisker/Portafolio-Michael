@@ -77,7 +77,7 @@
   /* Toggle específico para modo claro */
   --toggle-track-bg: #e0e0e0;
   --toggle-border: #e63946;
-  --toggle-thumb-bg: #ffc107;
+  --toggle-thumb-bg: #e63946;
   --toggle-shadow: rgba(0, 0, 0, 0.1);
 }
 

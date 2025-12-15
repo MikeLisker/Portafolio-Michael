@@ -21,10 +21,10 @@
   height: 320px;
   top: 8%;
   right: 12%;
-  background-image: url('/images/forma-gota.svg');
+  background-image: url('/images/figura-gota-mejorado.svg');
   background-size: contain;
   background-repeat: no-repeat;
-  opacity: 0.15;
+  opacity: 0.4025;
   pointer-events: none;
   z-index: 1;
 }
@@ -36,10 +36,10 @@
   height: 400px;
   bottom: 10%;
   left: 8%;
-  background-image: url('/images/figura-sol.svg');
+  background-image: url('/images/figura-sol2-mejorado.svg');
   background-size: contain;
   background-repeat: no-repeat;
-  opacity: 0.12;
+  opacity: 0.368;
   pointer-events: none;
   z-index: 1;
   animation: rotateSmooth 20s linear infinite;
@@ -64,13 +64,13 @@
 /* Formas vectoriales animadas - estética de rayos */
 .shape {
   position: absolute;
-  opacity: 0.2;
+  opacity: 0.4;
   transition: all var(--transition-normal);
   filter: blur(3px);
 }
 
 .welcomeScreen:hover .shape {
-  opacity: 0.3;
+  opacity: 0.5;
 }
 
 .circle {

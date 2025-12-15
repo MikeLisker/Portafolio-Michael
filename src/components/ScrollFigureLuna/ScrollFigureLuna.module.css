@@ -16,7 +16,7 @@
 .scrollFigure {
   width: 900px;
   height: 900px;
-  opacity: 0.15;
+  opacity: 0.4025;
   will-change: transform;
 }
 

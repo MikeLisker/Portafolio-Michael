@@ -35,7 +35,7 @@ const ScrollFigure = () => {
     <div className={styles.scrollFigureContainer}>
       <img 
         ref={figureRef}
-        src="/images/figura-sol2.svg" 
+        src="/images/figura-sol1-mejorado.svg" 
         alt="Figura decorativa"
         className={styles.scrollFigure}
       />

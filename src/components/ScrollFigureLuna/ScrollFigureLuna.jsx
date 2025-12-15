@@ -40,7 +40,7 @@ const ScrollFigureLuna = () => {
     <div className={styles.scrollFigureContainer}>
       <img 
         ref={figureRef}
-        src="/images/figura-luna.svg" 
+        src="/images/figura-luna-mejorado.svg" 
         alt="Figura luna decorativa"
         className={styles.scrollFigure}
       />

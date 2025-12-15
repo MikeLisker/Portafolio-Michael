@@ -48,8 +48,8 @@
 .circle {
   width: 280px;
   height: 280px;
-  background-image: url('/images/figura-sol.svg');
-  opacity: 0.25;
+  background-image: url('/images/figura-sol2-mejorado.svg');
+  opacity: 0.5175;
   animation: rotateSmooth 20s linear infinite;
 }
 
@@ -65,8 +65,8 @@
 .square {
   width: 350px;
   height: 350px;
-  background-image: url('/images/figura-ojo.svg');
-  opacity: 0.2;
+  background-image: url('/images/figura-ojo-mejorado.svg');
+  opacity: 0.46;
 }
 
 .contentGrid {
@@ -186,7 +186,7 @@
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
-  opacity: 0.3;
+  opacity: 0.345;
   z-index: 1;
 }
 

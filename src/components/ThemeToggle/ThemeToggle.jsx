@@ -31,7 +31,7 @@ const ThemeToggle = () => {
       <div className={styles.toggleTrack}>
         <div className={`${styles.toggleThumb} ${isDark ? styles.dark : styles.light}`}>
           {isDark ? (
-            <span className={styles.icon}>🌙</span>
+            <img src="/public/images/figura-luna.svg" alt="luna" className={styles.icon} />
           ) : (
             <span className={styles.icon}>☀️</span>
           )}
